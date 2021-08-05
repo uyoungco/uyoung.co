@@ -1,7 +1,7 @@
 <div class="beian">
-  <div><a target="_blank" href="">鲁ICP备15012762号-3</a></div>
+  <div><a target="_blank" href="https://beian.miit.gov.cn/">鲁ICP备15012762号-3</a></div>
   <div>
-    <img src="http://www.beian.gov.cn/img/ghs.png" style="display: inline-block;vertical-align: middle;">
+    <img src="/images/ghs.png" style="display: inline-block;vertical-align: middle;">
     <a
       target="_blank"
       href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=37040602005008"
