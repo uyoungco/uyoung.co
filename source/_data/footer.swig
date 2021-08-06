@@ -9,3 +9,25 @@
     >鲁公网安备 37040602005008号</a>
   </div>
 </div>
+
+<script>
+  (function() {
+    // title变化
+    var OriginTitile = document.title;
+    var titleTime;
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        $('[rel="icon"]').attr('href', "/failure.ico");
+        document.title = "(●—●)喔哟，崩溃啦！";
+        clearTimeout(titleTime);
+      }
+      else {
+        $('[rel="icon"]').attr('href', "/favicon.ico");
+        document.title = "(/≧▽≦/)咦！又好了！" + OriginTitile;
+        titleTime = setTimeout(function () {
+          document.title = OriginTitile;
+        }, 2000);
+      }
+    });
+  })()
+</script>
