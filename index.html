@@ -44,6 +44,7 @@
     lang   : 'zh-Hans'
   };
 </script>
+<script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 
   <title>Hi, uyoung!</title>
   
@@ -163,7 +164,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/Jenkins-golang/" class="post-title-link" itemprop="url">Jenkins部署Golang应用</a>
+            <a href="/Jenkins-golang/" class="post-title-link" itemprop="url">Jenkins部署Go应用</a>
         </h2>
 
         <div class="post-meta">
@@ -172,10 +173,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-08-05 15:36:00 / Modified: 16:08:42" itemprop="dateCreated datePublished" datetime="2021-08-05T15:36:00+08:00">2021-08-05</time>
+              <time title="Created: 2021-08-05 15:36:00" itemprop="dateCreated datePublished" datetime="2021-08-05T15:36:00+08:00">2021-08-05</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-08-06 11:01:19" itemprop="dateModified" datetime="2021-08-06T11:01:19+08:00">2021-08-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -197,7 +204,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <h3 id="为Jenkins安装Docker插件"><a href="#为Jenkins安装Docker插件" class="headerlink" title="为Jenkins安装Docker插件"></a>为Jenkins安装Docker插件</h3><blockquote>
+<p>没有安装Jenkins可以看我的上一篇文章 <a href="https://uyoung.co/docker-jenkins/">docker部署Jenkins</a></p>
+</blockquote>
+<p>因为是Docker打包和部署应用所以不安装Go环境（又轻松了一步）</p>
+<p>找到左侧的<code>系统管理</code> -&gt; <code>插件管理</code> -&gt; <code>可选插件</code> -&gt; 搜索<code>Docker</code></p>
+<p>勾选安装 <code>Docker Pipeline</code></p>
+<p>安装完成后重启Jenkins</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/Jenkins-golang/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -239,10 +260,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-08-05 13:00:00 / Modified: 16:08:42" itemprop="dateCreated datePublished" datetime="2021-08-05T13:00:00+08:00">2021-08-05</time>
+              <time title="Created: 2021-08-05 13:00:00" itemprop="dateCreated datePublished" datetime="2021-08-05T13:00:00+08:00">2021-08-05</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-08-06 11:01:19" itemprop="dateModified" datetime="2021-08-06T11:01:19+08:00">2021-08-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -314,10 +341,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-08-05 10:00:00 / Modified: 16:08:42" itemprop="dateCreated datePublished" datetime="2021-08-05T10:00:00+08:00">2021-08-05</time>
+              <time title="Created: 2021-08-05 10:00:00" itemprop="dateCreated datePublished" datetime="2021-08-05T10:00:00+08:00">2021-08-05</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-08-06 11:01:19" itemprop="dateModified" datetime="2021-08-06T11:01:19+08:00">2021-08-06</time>
+              </span>
 
           
 
@@ -485,6 +518,28 @@
     >鲁公网安备 37040602005008号</a>
   </div>
 </div>
+
+<script>
+  (function() {
+    // title变化
+    var OriginTitile = document.title;
+    var titleTime;
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        $('[rel="icon"]').attr('href', "/failure.ico");
+        document.title = "(●—●)喔哟，崩溃啦！";
+        clearTimeout(titleTime);
+      }
+      else {
+        $('[rel="icon"]').attr('href', "/favicon.ico");
+        document.title = "(/≧▽≦/)咦！又好了！" + OriginTitile;
+        titleTime = setTimeout(function () {
+          document.title = OriginTitile;
+        }, 2000);
+      }
+    });
+  })()
+</script>
 
 
         
